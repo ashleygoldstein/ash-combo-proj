@@ -32,10 +32,11 @@ class AshComboboxStreamExtension(omni.ext.IExt):
                 def combo_changed(item_model, item):
                     value_model = item_model.get_item_value_model(item)
                     self.current_selection = PRIMS[value_model.as_int]
+                    #The bottom two lines are WIP, we will connect these to our combo box next stream
                     # self.current_index = value_model.as_int
-                    self._combo_changed_sub = self.combo_model.subscribe_item_changed_fn(combo_changed)                    
+                    #self._combo_changed_sub = self.combo_model.subscribe_item_changed_fn(combo_changed)                    
                         
-
+                #Temp function to subscribe to item, we will replace this with our Prims later
                 def get_prim():
                     omni.kit.commands.execute('CreateMeshPrimWithDefaultXform',
                             prim_type='Cube',
