@@ -34,7 +34,7 @@ class AshComboboxStreamExtension(omni.ext.IExt):
                 return True
             return False
         
-        if check_prim_exists(blue_mtl) and check_prim_exists(red_mtl):
+        if check_prim_exists(blue_mtl) and check_prim_exists(red_mtl)== True:
             print("Materials already exist")
         else:
         #Load Blue and Red Materials
